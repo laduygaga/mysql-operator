@@ -1,0 +1,20 @@
+# without backup
+apiVersion: mysql.presslabs.org/v1alpha1
+kind: MysqlCluster
+metadata:
+  name: my-cluster
+spec:
+  replicas: 1
+  secretName: my-secret
+
+
+# with backup
+# apiVersion: mysql.presslabs.org/v1alpha1
+# kind: MysqlCluster
+# metadata:
+#   name: my-cluster
+# spec:
+#   replicas: 2
+#   secretName: my-secret
+#   backupSecretName: my-cluster-backup-secret
+#   backupURL: gs://pl-test-mysql-operator/
